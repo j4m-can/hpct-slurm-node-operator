@@ -21,8 +21,8 @@ logger = logging.getLogger(__name__)
 class HpctSlurmNodeCharm(NodeCharm):
     """Operator for cluster Slurm node."""
 
-    def __init__(self, *args):
-        super().__init__(*args)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
         self.interfaces = {
             "ldap-client-ready": interface_registry.load(
